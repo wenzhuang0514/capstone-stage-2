@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "421638970348",
+    "firebase_url": "https://triviahunt-f619a.firebaseio.com",
+    "project_id": "triviahunt-f619a",
+    "storage_bucket": "triviahunt-f619a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:421638970348:android:39b73e9bb92cd596",
+        "android_client_info": {
+          "package_name": "com.capstoneproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "421638970348-9o6qrv65btag0mhoo02pr1stmkasgqik.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjbE39Kw8tkCEaHarLzxSmeM2hcjueX4w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

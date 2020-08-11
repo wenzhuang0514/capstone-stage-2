@@ -1,0 +1,117 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/detailImage"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:contentDescription="@string/image_desc_cat"
+            android:focusable="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/improve" />
+
+        <TextView
+            android:id="@+id/detailHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            android:contentDescription="@string/category_text"
+            android:focusable="true"
+            android:text="@string/dummy_cat1"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp"
+
+            android:contentDescription="@string/choice"
+            android:focusable="true"
+            android:gravity="center"
+
+            android:text="@string/choice" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:gravity="center">
+
+            <RadioGroup
+                android:id="@+id/radiogrp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:focusable="true"
+                android:nextFocusDown="@+id/strq"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <RadioButton
+                    android:id="@+id/easy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:backgroundTint="@color/bg_screen2"
+                    android:checked="true"
+                    android:contentDescription="@string/easy"
+                    android:focusable="true"
+                    android:nextFocusRight="@+id/moderate"
+                    android:text="@string/easy" />
+
+                <RadioButton
+                    android:id="@+id/moderate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:backgroundTint="@color/bg_screen2"
+                    android:contentDescription="@string/moderate"
+                    android:focusable="true"
+                    android:nextFocusLeft="@id/easy"
+                    android:nextFocusRight="@+id/hard"
+                    android:text="@string/moderate" />
+
+                <RadioButton
+                    android:id="@+id/hard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/bg_screen2"
+                    android:contentDescription="@string/hard"
+                    android:focusable="true"
+                    android:nextFocusDown="@+id/strq"
+                    android:nextFocusLeft="@id/moderate"
+                    android:text="@string/hard" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/strq"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@color/bg_screen2"
+            android:contentDescription="@string/start_quiz"
+            android:elevation="20dp"
+            android:focusable="true"
+            android:nextFocusUp="@id/radiogrp"
+            android:text="@string/start_quiz"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

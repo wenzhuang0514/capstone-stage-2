@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.capstoneproject">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Network State Permissions -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher_app"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ui.WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.DetailActivity"
+            android:label="@string/title_activity_detail"
+            android:parentActivityName=".ui.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.capstoneproject.ui.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ui.QuestionsActivity"
+            android:label="@string/title_activity_questions"
+            android:parentActivityName=".ui.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.capstoneproject.ui.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ui.ResultActivity"
+            android:label="@string/title_activity_result"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".ui.SignupActivity" />
+        <activity android:name=".ui.LoginActivity" />
+        <activity android:name=".ui.ResetPasswordActivity" />
+
+        <!-- Widget Receiver -->
+        <receiver android:name=".Widget.WidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_provider" />
+        </receiver>
+        <!-- Widget service -->
+        <service
+            android:name=".Widget.WidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+
+        <activity android:name=".ui.ProfileActivity" />
+
+        <service
+            android:name=".service.MyIntentService"
+            android:exported="false" />
+
+        <provider
+            android:name=".data.ScoresProvider"
+            android:authorities="com.capstoneproject"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".ui.LeaderBoardActivity"
+            android:label="@string/title_activity_leader_board"
+            android:parentActivityName=".ui.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.capstoneproject.ui.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ui.AboutActivity"
+            android:label="@string/title_activity_about"
+            android:parentActivityName=".ui.MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>

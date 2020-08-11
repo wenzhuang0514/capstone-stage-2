@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    android:background="@drawable/side_nav_bar"
+    android:focusable="true"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingEnd="@dimen/activity_horizontal_margin"
+    android:paddingStart="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/profile_desc"
+        android:focusable="true"
+        android:nextFocusDown="@+id/name_draw"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:src="@mipmap/ic_launcher_app" />
+
+    <TextView
+        android:id="@+id/name_draw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/name_des"
+        android:focusable="true"
+        android:nextFocusDown="@+id/email_draw"
+        android:nextFocusUp="@id/imageView"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:text="@string/dummy_name_text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <TextView
+        android:id="@+id/email_draw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/email_desc"
+        android:focusable="true"
+        android:nextFocusUp="@id/name_draw"
+        android:text="@string/dummy_email" />
+
+</LinearLayout>

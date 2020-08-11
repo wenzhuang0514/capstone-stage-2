@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/rank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:contentDescription="@string/rank"
+        android:focusable="true"
+        android:nextFocusDown="@+id/user_name"
+        android:text="@string/rank" />
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:contentDescription="@string/username"
+        android:focusable="true"
+        android:nextFocusDown="@+id/name"
+        android:nextFocusUp="@id/rank"
+        android:text="@string/username" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:contentDescription="@string/name_des"
+        android:focusable="true"
+        android:nextFocusDown="@+id/level"
+        android:nextFocusUp="@id/user_name"
+        android:text="@string/dummy_cat1" />
+
+    <TextView
+        android:id="@+id/level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:contentDescription="@string/level_text"
+        android:focusable="true"
+        android:nextFocusDown="@+id/score"
+        android:nextFocusUp="@id/name"
+        android:text="@string/dummy_level" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:contentDescription="@string/score_desc"
+        android:focusable="true"
+        android:nextFocusUp="@id/level"
+        android:text="@string/dummy_score1" />
+</LinearLayout>
